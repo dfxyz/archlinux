@@ -1,4 +1,4 @@
-FROM archlinux:latest
+FROM archlinux
 
 RUN pacman -Syu --noconfirm zsh vim git docker
 
@@ -18,4 +18,4 @@ COPY ./resources/sshd_config /etc/ssh/
 EXPOSE 2222/tcp
 
 WORKDIR /
-ENTRYPOINT zsh
+CMD ["/usr/bin/zsh"]

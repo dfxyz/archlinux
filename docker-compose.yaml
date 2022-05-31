@@ -1,7 +1,7 @@
 services:
   os:
     image: dfxyz/archlinux
-    entrypoint: /usr/bin/sshd -D
+    command: ["/usr/bin/sshd", "-D"]
     ports:
       - 2222:2222/tcp
     volumes:
@@ -10,7 +10,7 @@ services:
         target: /var/run/docker.sock
   kcptun-ssh:
     image: xtaci/kcptun 
-    entrypoint: server -l :2222 -t os:2222
+    command: ["server", "-l", ":2222", "-t", "os:2222"]
     ports:
       - 2222:2222/udp
     depends_on:
