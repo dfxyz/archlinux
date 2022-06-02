@@ -1,7 +1,7 @@
 AddressFamily any
 ListenAddress 0.0.0.0
 ListenAddress ::
-Port 2222
+Port 22
 
 AuthorizedKeysFile .ssh/authorized_keys
 

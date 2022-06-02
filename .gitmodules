@@ -1,0 +1,3 @@
+[submodule "resources/dotfiles"]
+	path = resources/dotfiles
+	url = https://github.com/dfxyz/dotfiles.git
