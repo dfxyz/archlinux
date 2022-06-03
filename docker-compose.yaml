@@ -1,5 +1,6 @@
 services:
   os:
+    # build: .
     image: dfxyz/archlinux
     command: ["/usr/bin/sshd", "-D"]
     ports:
