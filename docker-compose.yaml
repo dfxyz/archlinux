@@ -1,7 +1,7 @@
 services:
   os:
     # build: .
-    image: dfxyz/archlinux
+    image: dfxyz/archlinux:with-rust
     command: ["/usr/bin/sshd", "-D"]
     ports:
       - 22:22/tcp

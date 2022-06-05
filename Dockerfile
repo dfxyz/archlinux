@@ -15,3 +15,9 @@ EXPOSE 22/tcp
 
 CMD ["/usr/bin/zsh"]
 WORKDIR /root
+
+RUN pacman -S --noconfirm gcc
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o rust.sh
+RUN chmod +x ./rust.sh
+RUN ./rust.sh -y
+RUN rm ./rust.sh
