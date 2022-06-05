@@ -14,3 +14,4 @@ COPY ./resources/sshd_config /etc/ssh/
 EXPOSE 22/tcp
 
 CMD ["/usr/bin/zsh"]
+WORKDIR /root
